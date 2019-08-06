@@ -1,0 +1,10 @@
+version: "2.4"
+
+services:
+  dev:
+    image: tomcat:9.0.1-jre8-alpine
+    volumes:
+      - ./webapp:/usr/local/tomcat/webapps/webapp
+    command: catalina.sh run
+    ports:
+      - 8888:8080
